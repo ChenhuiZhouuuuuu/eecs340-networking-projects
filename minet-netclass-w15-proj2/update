@@ -1,0 +1,6 @@
+g++ -g -ggdb -gstabs+ -Wall -std=c++0x -fPIC -I/usr/include/pcap -Isrc/libminet -c src/core/tcp_module.cc -o src/core/tcp_module.o
+g++ -g -ggdb -gstabs+ -Wall -std=c++0x -fPIC -I/usr/include/pcap -Isrc/libminet -c src/core/ip_mux.cc -o src/core/ip_mux.o
+g++ -g -ggdb -gstabs+ -Wall -std=c++0x -fPIC -I/usr/include/pcap -Isrc/libminet -c src/core/sock_module.cc -o src/core/sock_module.o
+g++ src/core/tcp_module.o -lnet -lpcap lib/libminet.a -o bin/tcp_module
+g++ src/core/sock_module.o -lnet -lpcap lib/libminet.a -o bin/sock_module
+g++ src/core/ip_mux.o -lnet -lpcap lib/libminet.a -o bin/ip_mux

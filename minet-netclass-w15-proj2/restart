@@ -1,0 +1,3 @@
+./stop_minet.sh
+./start_minet.sh
+#./run_module.sh "tcp_client u 129.105.7.226 5050"

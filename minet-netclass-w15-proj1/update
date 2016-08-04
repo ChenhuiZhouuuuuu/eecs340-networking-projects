@@ -1,0 +1,2 @@
+g++ -g -ggdb -gstabs+ -Wall -std=c++0x -fPIC -I/usr/include/pcap -Isrc/libminet -c src/apps/http_client.cc -o src/apps/http_client.o
+g++ src/apps/http_client.o -lnet -lpcap lib/libminet.a -o bin/http_client
